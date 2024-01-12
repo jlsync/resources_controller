@@ -43,8 +43,8 @@ describe AccountsController do
     end
   
     it ".new should call :new on User" do
-      expect(User).to receive(:new).with(:args => 'args')
-      @resource_service.new :args => 'args'
+      expect(User).to receive(:new).with({:args => 'args'})
+      @resource_service.new(args: 'args')
     end
   
     it ".find should call :current_user" do

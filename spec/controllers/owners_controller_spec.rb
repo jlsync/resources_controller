@@ -63,7 +63,7 @@ describe OwnersController do
     end
   
     it ".new should call :build_owner on @forum" do
-      expect(@forum).to receive(:build_owner).with(:args => 'args')
+      expect(@forum).to receive(:build_owner).with({:args => 'args'})
       @resource_service.new :args => 'args'
     end
   
@@ -86,7 +86,7 @@ describe OwnersController do
 
     it "should be successful" do
       do_get
-      expect(response).to be_success
+      expect(response).to be_successful
     end
   
     it "should render show.rhtml" do
@@ -129,7 +129,7 @@ describe OwnersController do
 
     it "should be successful" do
       do_get
-      expect(response).to be_success
+      expect(response).to be_successful
     end
   
     it "should render new.rhtml" do
@@ -156,7 +156,7 @@ describe OwnersController do
 
     it "should be successful" do
       do_get
-      expect(response).to be_success
+      expect(response).to be_successful
     end
   
     it "should render edit.rhtml" do

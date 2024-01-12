@@ -172,7 +172,7 @@ end_str
   
     it "should be successful" do
       do_get
-      expect(response).to be_success
+      expect(response).to be_successful
     end
 
     it "should render index.rhtml" do
@@ -238,7 +238,7 @@ end_str
   
     it "should be successful" do
       do_get
-      expect(response).to be_success
+      expect(response).to be_successful
     end
 
     it "should render index.rhtml" do
@@ -273,7 +273,7 @@ end_str
   
     it "should be successful" do
       do_get
-      expect(response).to be_success
+      expect(response).to be_successful
     end
 
     it "should find all forums" do
@@ -302,7 +302,7 @@ end_str
   
     it "should be successful" do
       do_get
-      expect(response).to be_success
+      expect(response).to be_successful
     end
 
     it "should find all forums" do
@@ -329,7 +329,7 @@ end_str
 
     it "should be successful" do
       do_get
-      expect(response).to be_success
+      expect(response).to be_successful
     end
   
     it "should render show.rhtml" do
@@ -364,7 +364,7 @@ end_str
 
     it "should be successful" do
       do_get
-      expect(response).to be_success
+      expect(response).to be_successful
     end
   
     it "should find the forum requested" do
@@ -392,7 +392,7 @@ end_str
 
     it "should be successful" do
       do_get
-      expect(response).to be_success
+      expect(response).to be_successful
     end
   
     it "should render show.rjs" do
@@ -424,7 +424,7 @@ end_str
 
     it "should be successful" do
       do_get
-      expect(response).to be_success
+      expect(response).to be_successful
     end
   
     it "should render new.rhtml" do
@@ -461,7 +461,7 @@ end_str
 
     it "should be successful" do
       do_get
-      expect(response).to be_success
+      expect(response).to be_successful
     end
   
     it "should render edit.rhtml" do

@@ -48,7 +48,7 @@ describe TagsController do
     end
   
     it ".new should call new on Tag" do
-      expect(Tag).to receive(:new).with(:args => "args")
+      expect(Tag).to receive(:new).with({:args => "args"})
       resource = @resource_service.new(:args => "args")
     end
   

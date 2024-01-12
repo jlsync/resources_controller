@@ -6,9 +6,8 @@ end
 
 describe "ActionView with resources_controller Helper" do
   before do
-    @view = ViewWithResourcesControllerHelper.new
     @controller = double('Controller')
-    @view.controller = @controller
+    @view = ViewWithResourcesControllerHelper.new(ActionView::LookupContext.new(ActionController::Base.view_paths), {}, @controller)
   end
   
   def self.it_should_forward_to_controller(msg, *args)
@@ -38,8 +37,8 @@ end
 
 describe "Helper#form_for_resource (when resource is new record)" do
   before do
-    @view = ViewWithResourcesControllerHelper.new
     @controller = double('Controller')
+    @view = ViewWithResourcesControllerHelper.new(ActionView::LookupContext.new(ActionController::Base.view_paths), {}, @controller)
     @specification = double('Specification')
     allow(@specification).to receive(:singleton?).and_return(false)
     @resource = double('Forum')
@@ -73,8 +72,8 @@ end
 
 describe "Helper#form_for_resource (when resource is new record) and resource is singleton" do
   before do
-    @view = ViewWithResourcesControllerHelper.new
     @controller = double('Controller')
+    @view = ViewWithResourcesControllerHelper.new(ActionView::LookupContext.new(ActionController::Base.view_paths), {}, @controller)
     @specification = double('Specification')
     allow(@specification).to receive(:singleton?).and_return(true)
     @resource = double('Account')
@@ -96,8 +95,8 @@ end
 
 describe "Helper#form_for_resource (when resource is existing record)" do
   before do
-    @view = ViewWithResourcesControllerHelper.new
     @controller = double('Controller')
+    @view = ViewWithResourcesControllerHelper.new(ActionView::LookupContext.new(ActionController::Base.view_paths), {}, @controller)
     @specification = double('Specification')
     allow(@specification).to receive(:singleton?).and_return(false)
     @resource = double('Forum').as_null_object

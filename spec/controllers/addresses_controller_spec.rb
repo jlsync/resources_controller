@@ -127,7 +127,7 @@ describe AddressesController do
   
     it "should be successful" do
       do_get
-      expect(response).to be_success
+      expect(response).to be_successful
     end
 
     it "should render index.rhtml" do
@@ -161,7 +161,7 @@ describe AddressesController do
 
     it "should be successful" do
       do_get
-      expect(response).to be_success
+      expect(response).to be_successful
     end
   
     it "should render show.rhtml" do
@@ -195,7 +195,7 @@ describe AddressesController do
 
     it "should be successful" do
       do_get
-      expect(response).to be_success
+      expect(response).to be_successful
     end
   
     it "should render new.rhtml" do
@@ -234,7 +234,7 @@ describe AddressesController do
 
     it "should be successful" do
       do_get
-      expect(response).to be_success
+      expect(response).to be_successful
     end
   
     it "should render edit.rhtml" do
